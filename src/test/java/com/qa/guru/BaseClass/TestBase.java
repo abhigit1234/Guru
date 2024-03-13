@@ -85,7 +85,7 @@ static String repname;
 		timestamp = new SimpleDateFormat("dd.MMM.yyyy.HH.mm.ss").format(new Date());
 		 repname = "Test_Report"+timestamp+".html";
 		extent = new ExtentReports();
-		spark = new ExtentSparkReporter(".//ExtentReports//"+repname);
+		spark = new ExtentSparkReporter("ExtentReports//"+repname);
 		extent.attachReporter(spark);
 		extent.setSystemInfo("os name", System.getProperty("os.name"));
 		extent.setSystemInfo("os version", System.getProperty("os.version"));
@@ -102,7 +102,7 @@ static String repname;
 	@AfterSuite
 	public void generateReports() throws IOException {
 		extent.flush();
-		Desktop.getDesktop().browse(new File(".//ExtentReports//"+repname).toURI());
+		Desktop.getDesktop().browse(new File("ExtentReports//"+repname).toURI());
 	}
 	@BeforeMethod
 	public void groupsstatus(Method m) {
