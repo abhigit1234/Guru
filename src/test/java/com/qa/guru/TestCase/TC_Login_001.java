@@ -1,8 +1,5 @@
 package com.qa.guru.TestCase;
 
-import static org.testng.Assert.assertTrue;
-
-import org.apache.commons.lang3.RandomStringUtils;
 import org.openqa.selenium.NoAlertPresentException;
 import org.testng.annotations.Test;
 
